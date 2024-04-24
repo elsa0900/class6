@@ -50,6 +50,8 @@ class ViewController: UIViewController {
                                  .replacingOccurrences(of: "鑰匙", with: "金錢")
                                  .replacingOccurrences(of: "橋", with: "人生旅途")
         
+//        清空 warnig msg
+        warningMsg.text = ""
         if resultText == "" {
             warningMsg.text = "請輸入！"
         }else if !containsKeyword {
