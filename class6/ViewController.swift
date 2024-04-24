@@ -31,9 +31,9 @@ class ViewController: UIViewController {
         resultLabel.isHidden = true
         returnBtn.isHidden = true
         playSoundBtn.isHidden = true
-        
     }
 
+//送出結果
     @IBAction func submitInputText(_ sender: Any) {
         let keywords = ["我","兔子","鑰匙","橋"]
         let resultText = inputTextView.text ?? ""
@@ -66,6 +66,7 @@ class ViewController: UIViewController {
         
     }
     
+//返回輸入框
     @IBAction func returnInputText(_ sender: Any) {
         inputTextView.isHidden = false
         submitBtn.isHidden = false
@@ -74,6 +75,7 @@ class ViewController: UIViewController {
         playSoundBtn.isHidden = true
     }
   
+
     @IBAction func speakResultText(_ sender: Any) {
         let resultText = resultLabel.text ?? ""
         let utterance = AVSpeechUtterance(string: resultText )
